@@ -83,3 +83,54 @@ console.log('' === false);          // false
 console.log(null == undefined);     // true
 console.log(null === undefined);    // false
 
+const name = 'ellie';
+if(name === 'ellie'){
+    console.log('Welcome, Ellie!');
+} else if (name === 'coder'){
+    console.log('unknown');
+}
+
+// 9. Ternary operator:?
+// condition ? value1 : value2;
+console.log(name === 'ellie'?abc:def)
+
+switch(browser){
+    case 'IE':
+        console.log('go away!');
+        break;
+    case 'Chrome':
+    case 'Firefox':
+        console.log('yes!');
+        break;
+    default:
+        console.log('hi');
+        break;
+}
+
+// loops
+let i = 3;
+while(i>0){
+    console.log(`while: ${i}`);
+    i--;
+}
+
+// do while
+
+do{
+    console.log(`do while: ${i}`);
+    i--;
+}while(i>0);
+
+for(let i=3; i>0; i= i-2){
+    console.log(`inline variabel for: ${i}`);
+}
+
+// nested loops
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
+        console.log(`i: ${i}, j: ${j}`);
+    }
+}
+
+
+
