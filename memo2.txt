@@ -1,0 +1,43 @@
+1. use strict
+added in ES 5
+use this for Valina Javascript.
+'use strict';
+
+2. Variable
+let (added in ES 6)
+ES 6에서 추가된 변수 선언
+let globalName = 'global name';
+{
+let name = 'ellie'; (선언과 동시에 name 에 값 할당)
+console.log(name);
+name = 'hello'; (name에 새로운 값 할당)
+console.log(name);
+console.log(globalName);
+}
+console.log(name);
+console.log(globalName);
+
+코드를 {}블록 안에서 작성하면 지역적으로 동작함
+밖에서 사용하면 전역적으로 동작
+전역변수를 최소화 하는 것이 좋다
+
+var (don't ever use this!)
+var hoisting (move declaration from bottom to top)
+-> var는 선언을 제일 위로 올려서 실행함
+var 는 블록 요소를 무시함
+(전역, 지역 구분 불가능)
+
+age = 4;
+var age;
+(선언 전에 값을 할당했는데 에러로 잡지 않음)
+
+age = 4;
+let age;
+(선언 전에 값을 할당했으므로 에러로 잡음)
+
+{
+    age = 4;
+    var age;
+}
+console.log(age); 
+(지역적으로 선언된 변수이지만 블록 밖에서도 동작)

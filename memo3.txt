@@ -1,0 +1,9 @@
+3. Contants
+favor immutable data type always for a few reasons;
+- security
+- thread safety
+- reduce human mistakes
+
+const daysInWeek = 7;
+const maxNumber = 5;
+

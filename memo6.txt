@@ -1,0 +1,15 @@
+Variable, rw(read/write)
+변수는 메모리의 값을 읽고 쓰기가 가능함
+
+Constant, r(read only)
+상수는 읽기만 가능함
+
+값이 바뀌지 않을 수의 경우
+const로 선언하여 사용하는 것이 좋음!
+
+variable 은 값이 저장됨
+object는 값이 커서 object를 가리키는 reference가 저장됨
+(object의 데이터 자체를 변경하는 것은 불가능, Immutable)
+(object의 값은 변경할 수 있음, Mutable)
+
+JS의 대부분의 object는 mutable

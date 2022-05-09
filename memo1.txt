@@ -1,0 +1,13 @@
+script 선언
+parsint HTML -> html 실행
+fetching js -> 서버에서 js 받아옴
+executing js -> js 실행
+head : js의 사이즈가 커지면 html 로딩 시간도 길어지게 되어 속도가 느려짐
+
+body : js에 의존적인 웹이라면 데이터를 받는 속도가 느려서 정상적인 화면을 못 볼 수도 있음 
+
+async : html parsing 과 병렬로 js fetching 도 동시에, 다운 시간은 줄일 수 있지만 js의 조작 시점에 html요소가 정의되어있지 않을 수 있음, parsing하는 동안에 js를 executing 하기 위해 페이지가 멈출 수 있음
+
+* defer : parsing과 fetching을 병렬로 하면서 executing을 parsing이 끝난 뒤에 진행함, 순서를 개발자가 정한 대로 실행할 수 있음. (가장 추천)
+
+'use strict' : 비정상적인 동작 방지
