@@ -1,0 +1,5 @@
+클래스는 연관있는 데이터들을 묶어놓은 개념
+fields, methods..
+상속, 다향성...
+
+fields만 들어있는 클래스를 dataclass로 표현
