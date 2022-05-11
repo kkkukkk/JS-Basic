@@ -150,3 +150,22 @@ console.log(triangle instanceof Shape);
 console.log(triangle instanceof Object);
 console.log(triangle.toString());
 // JS역시 Object가 최상위 클래스..
+
+function calculate(command, a, b){
+    switch(command){
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'multiply':
+            return a * b;
+        case 'remainder':
+            return a % b;
+        default:
+            throw Error('unknown command');
+    }
+}
+
+console.log(calculate('add',2,3));
