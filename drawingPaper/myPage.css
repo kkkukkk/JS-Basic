@@ -23,8 +23,6 @@ body{
     margin:auto;
 }
 
-/* ¸Þ´º */
-
 .myPageContentContainer{
     margin-top:35px;
 }
@@ -113,7 +111,7 @@ body{
 }
 
 .myPageProfileButton:hover{
-    transform:scale(5);
+    transform:scale(20);
     transition:3s;
 }
 
@@ -170,7 +168,7 @@ body{
     font-size:40px;
 }
 
-.myPageContentLowerInfo{
+.myPageContentLower{
     min-height:100px;
     color: rgb(158, 158, 158);
     font-size: 18px;
@@ -182,4 +180,10 @@ body{
 
 .myPageContentLowerWrapper{
     border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.myPageChangeTitle{
+    font-weight: 700;
+    font-size: 32px !important;
+    line-height: 44px !important;
 }

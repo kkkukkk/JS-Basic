@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http0equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="myPage.css">
+</head>
+
+<body>
+    
+    <div class="myPageContent">
+        <div class="myPageContentUpperWrapper">
+            <div class="myPageContentUpper">
+                <div class="myPageChangeTitle">
+                    <h1>설정</h1>
+                </div>
+                <div class="myPageContentContainer">
+                    <div class="myPageContentMenu">
+                        <div id ="horizontal-underline"></div>
+                        <span><div><a onclick="acyncMovePage('myPage_1.html')" style="cursor:pointer;" class="clicked">프로필</a></div></span>
+                        <span><div><a onclick="acyncMovePage('myPage_2.html')" style="cursor:pointer;">계정</a></div></span>
+                        <span><div><a onclick="acyncMovePage('myPage_3.html')" style="cursor:pointer;">결제수단</a></div></span>
+                        <span><div><a onclick="acyncMovePage('myPage_4.html')" style="cursor:pointer;">배송지</a></div></span>
+                        <span><div><a onclick="acyncMovePage('myPage_4.html')" style="cursor:pointer;">알림</a></div></span>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        <div class="myPageContentLowerWrapper">
+            <div id="myPageContentLower" class="myPageContentLower">
+                    <p>안쪽 표시할 내용</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script defer src="myPage.js"></script>
+</body>
+</html>

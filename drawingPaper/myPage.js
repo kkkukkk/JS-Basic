@@ -21,3 +21,20 @@ function horizontalIndicator(e) {
 horizontalMenus.forEach((menu) =>
     menu.addEventListener("click", (e) => horizontalIndicator(e))
 );
+
+
+function acyncMovePage(url){
+    // ajax option
+    var ajaxOption = {
+            url : url,
+            async : true,
+            type : "GET",
+            dataType : "html",
+            cache : false
+    };
+    
+    $.ajax(ajaxOption).done(function(data){
+        $('#myPageContentLower').children().remove();
+        $('#myPageContentLower').html(data);
+    });
+}
