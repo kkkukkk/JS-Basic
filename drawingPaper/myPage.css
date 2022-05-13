@@ -187,3 +187,20 @@ body{
     font-size: 32px !important;
     line-height: 44px !important;
 }
+
+.myPageProfileContentImage{
+    width: 80px;
+    height: 80px;
+}
+
+.myPageProfileContentWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myPageProfileContentHead{
+    display:flex;
+    justify-self: start;
+    align-items: center;
+}
