@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http0equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+
+    <style>
+        .entire{
+            min-width: 328px;
+            max-width: 600px;
+            border-radius: 4px;
+            background: transparent;
+        }
+        .title,
+        .inputLabel{
+            text-align: left;
+        }
+
+        .title{
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            line-height: 36px;
+            letter-spacing: -0.025em;
+        }
+
+        .inputLabel{
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.015em;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .getName input[type="text"]{
+            width:240px;
+            color: rgb(13, 13, 13);
+            background: rgb(255, 255, 255);
+            padding: 0px 12px;
+            height: 32px;
+            min-width: 100px;
+            display: flex;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.015em;
+            -webkit-box-align: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgb(230, 230, 230);
+        }
+
+        .getName,
+        .getAddr,
+        .getAddrDetail,
+        .getPhone{
+            display: flex;
+            align-items: flex-start;
+            
+        }
+
+        .getAddr input[type="text"],
+        .getAddrDetail input[type="text"],
+        .getPhone input[type="text"]{
+            width:100%;
+            color: rgb(13, 13, 13);
+            background: rgb(255, 255, 255);
+            padding: 0px 12px;
+            height: 32px;
+            min-width: 100px;
+            display: flex;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.015em;
+            -webkit-box-align: center;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid rgb(230, 230, 230);
+        }
+
+        .chkBtns{
+            display:flex;
+            align-items: flex-start;
+            margin: 20px 0px 0px;
+        }
+
+        input[type="checkbox"]{
+            width: 17px;
+            height: 17px;
+            cursor: pointer;
+        }
+
+        .addrWrapper,
+        .phoneWrapper,
+        .addrDetailWrapper{
+            margin-top:32px;
+        }
+
+        .chkLabel{
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: -0.015em;
+            font-weight: 400;
+            margin-top: -1px;
+            margin-left: 3px;
+        }
+
+        .inputWrapper{
+            display: flex;
+            width:100%;
+            align-items: center;
+        }
+
+        .addrBtn{
+            position: absolute;
+            right: 25px;
+            cursor: pointer;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            height: 40px;
+            white-space: nowrap;
+            margin: 0px;
+            border: 0px;
+            outline: none;
+            font-weight: normal;
+            box-sizing: border-box;
+            padding: 0px 16px;
+            background-color: transparent;
+            color: rgb(61, 61, 61);
+            font-size: 16px;
+            line-height: 27px;
+            letter-spacing: -0.020em;
+        }
+
+        .commitBtn{
+            margin: 40px 0px 0px;
+        }
+
+        .commitBtn button {   
+            width: 100%;
+            cursor: pointer;
+            display: inline-flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            height: 52px;
+            white-space: nowrap;
+            border-radius: 4px;
+            margin: 0px;
+            border: 0px;
+            outline: none;
+            font-weight: bold;
+            box-sizing: border-box;
+            padding: 0px 24px;
+            background-color: rgb(255, 87, 87);
+            color: rgb(255, 255, 255);
+            font-size:16px;
+            line-height: 27px;
+            letter-spacing: -0.020em;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+        function hi(){
+
+            Swal.fire({
+                html:
+                '<div class="entire"><div class="title">배송지 추가</div><div class="inputLabel">받는 사람</div><div class="getName"><input type="text" placeholder="이름 입력" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'이름 입력\'"></div><div class="addrWrapper"><div class="inputLabel">주소</div><div class="getAddr"><span class="inputWrapper"><input type="text"><button class="addrBtn">go</button></span></div></div><div class="addrDetailWrapper"><div class="inputLabel">상세 주소</div><div class="getAddrDetail"><input type="text"></div></div><div class="phoneWrapper"><div class="inputLabel">받는 사람 휴대폰 번호</div><div class="getPhone"><input type="text"></div></div><div class="chkBtns"><div class="chkBtn"><input id="btn" type="checkbox"></div><div class="chkLabel"><label for="btn">기본 배송지로 등록</label></div></div><div class="commitBtn"><button>등록 완료</button></div></div>',
+                width:600,
+                showConfirmButton: false,
+                showCloseButton: true,
+                focusConfirm: false,
+            });
+
+        }
+    </script>
+    <button onclick="hi()">동작!</button>
+
+</body>
+</html>

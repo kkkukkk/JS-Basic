@@ -1,0 +1,157 @@
+.entire {
+    min-width: 328px;
+    max-width: 600px;
+    border-radius: 4px;
+    background: transparent;
+}
+
+.title,
+.inputLabel {
+    text-align: left;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    line-height: 36px;
+    letter-spacing: -0.025em;
+}
+
+.inputLabel {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.getName input[type="text"] {
+    width: 240px;
+    color: rgb(13, 13, 13);
+    background: rgb(255, 255, 255);
+    padding: 0px 12px;
+    height: 32px;
+    min-width: 100px;
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.getName,
+.getAddr,
+.getAddrDetail,
+.getPhone {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.getAddr input[type="text"],
+.getAddrDetail input[type="text"],
+.getPhone input[type="text"] {
+    width: 100%;
+    color: rgb(13, 13, 13);
+    background: rgb(255, 255, 255);
+    padding: 0px 12px;
+    height: 32px;
+    min-width: 100px;
+    display: flex;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.chkBtns {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0px 0px;
+}
+
+input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.addrWrapper,
+.phoneWrapper,
+.addrDetailWrapper {
+    margin-top: 32px;
+}
+
+.chkLabel {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.015em;
+    font-weight: 400;
+    margin-top: -1px;
+    margin-left: 3px;
+}
+
+.inputWrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.addrBtn {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 40px;
+    white-space: nowrap;
+    margin: 0px;
+    border: 0px;
+    outline: none;
+    font-weight: normal;
+    box-sizing: border-box;
+    padding: 0px 16px;
+    background-color: transparent;
+    color: rgb(61, 61, 61);
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.020em;
+}
+
+.commitBtn {
+    margin: 40px 0px 0px;
+}
+
+.commitBtn button {
+    width: 100%;
+    cursor: pointer;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 52px;
+    white-space: nowrap;
+    border-radius: 4px;
+    margin: 0px;
+    border: 0px;
+    outline: none;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 0px 24px;
+    background-color: rgb(255, 87, 87);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -0.020em;
+}
