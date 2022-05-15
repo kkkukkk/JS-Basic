@@ -1,31 +1,50 @@
 let horizontalUnderLine = document.getElementById("horizontal-underline");
 let horizontalMenus = document.querySelectorAll(".myPageContentMenu a");
+let horizontalMenuss = document.querySelectorAll("eachMenu");
+let fst = document.getElementById('fst');
 
 function horizontalIndicator(e) {
+    horizontalUnderLine.style.transition = 0.3 + 's';
     horizontalUnderLine.style.left = e.currentTarget.offsetLeft + "px";
     horizontalUnderLine.style.width = e.currentTarget.offsetWidth + "px";
-    horizontalUnderLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + 16 + "px";
-    
+    horizontalUnderLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + 20 + "px";
+
     if (e.target.classList[1] === "clicked"){
         e.target.classList.remove("clicked");
+        e.target.style.borderBottom = "none";
     } else{
-        for (var i = 0; i < horizontalMenus.length; i++){
+        for (let i = 0; i < horizontalMenus.length; i++){
             horizontalMenus[i].classList.remove("clicked");
+            horizontalMenus[i].style.borderBottom = "none";
         }
         e.target.classList.add("clicked");
+        e.target.style.borderBottom = "2px solid red"
+        e.target.style.transitionDuration = '0.3s';    
+        e.target.style.transitionProperty = 'all';    
+        e.target.style.transitionTimingFunction = 'linear';
+        e.target.style.transitionOrigin = 'center left';
     }
+
+    
     
 }
-
 
 horizontalMenus.forEach((menu) =>
     menu.addEventListener("click", (e) => horizontalIndicator(e))
 );
 
+$(document).ready(function(){
+    horizontalUnderLine.style.transition = 0 + 's';
+    horizontalUnderLine.style.left = fst.offsetLeft + "px";
+    horizontalUnderLine.style.width = fst.offsetWidth + "px";
+    horizontalUnderLine.style.top = fst.offsetTop + fst.offsetHeight + 20 + "px";
+    horizontalUnderLine.style.animation = 'fadeout 1s';
+});
+
 
 function acyncMovePage(url){
     // ajax option
-    var ajaxOption = {
+    let ajaxOption = {
             url : url,
             async : true,
             type : "GET",
@@ -37,4 +56,121 @@ function acyncMovePage(url){
         $('#myPageContentLower').children().remove();
         $('#myPageContentLower').html(data);
     });
+}
+
+$(document).ready(function(){
+    $('#myPageContentLower').load("myPage_1.html");
+});
+
+function toggleChange(e)
+{
+    switch(e){
+        case 1:
+            let i = document.getElementById("profileContentImage");
+            let t1 = document.getElementById("profileToggleBtn1");
+            console.log("이미지");
+            if(t1.value=="n"){
+                i.innerHTML='<input type="file">';
+                t1.value="y";
+                t1.innerHTML="취소";
+            }else{
+                i.innerHTML='<div class="myPageProfileImageWrapper"><div class="myPageProfileImageBox"><div class="myPageProfileImage" id="profileContentImage">박</div></div></div>';
+                t1.value="n";
+                t1.innerHTML="변경";
+            }
+            break;
+        case 2:
+            let n = document.getElementById("profileContentName");
+            let t2 = document.getElementById("profileToggleBtn2");
+            console.log("이름");
+            if(t2.value=="n"){
+                n.innerHTML='<div class="changeProfileForm"><div class="changeProfileInfo"><input type="text" value="이름"></div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                t2.value="y";
+                t2.innerHTML="취소";
+            }else{
+                n.innerHTML='<div class="profileContent" id="profileContentName">이름입니다</div>';
+                t2.value="n";
+                t2.innerHTML="변경";
+            } 
+            break;
+        case 3:
+            let u = document.getElementById("profileContentUrl");
+            let t3 = document.getElementById("profileToggleBtn3");
+            console.log("URL");
+            if(t3.value=="n"){
+                u.innerHTML='<div class="changeProfileForm"><div class="changeProfileInfo"><input type="text" value="URL"></div><div class="changeUrlExplain">사용자 이름은 회원님의 프로필 주소로 활용됩니다. 예 ) tumblbug.com/u/사용자이름</div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                t3.value="y";
+                t3.innerHTML="취소";
+            }else{
+                u.innerHTML='<div class="profileContent" id="profileContentUrl">http://www.tumblbug.com/u/<strong>satjtammvyhtxpqs</strong></div>';
+                t3.value="n";
+                t3.innerHTML="변경";
+            }
+            break;
+        case 4:
+            let d = document.getElementById("profileContentIntro");
+            let t4 = document.getElementById("profileToggleBtn4");
+            console.log("소개");
+            if(t4.value=="n"){
+                d.innerHTML='<div class="changeProfileForm"><div class="changeProfileInfo" id="profileIntroChange"><textarea id="profileIntroChange1" placeholder="자기소개를 입력해주세요" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'자기소개를 입력해주세요\'"></textarea></div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                t4.value="y";
+                t4.innerHTML="취소";
+            }else{
+                d.innerHTML='<div class="profileContent" id="profileContentIntro">등록된 소개가 없습니다.</div>';
+                t4.value="n";
+                t4.innerHTML="변경";
+            }
+            break;
+        case 5:
+            let uu = document.getElementById("profileContentWebPage");
+            let t5 = document.getElementById("profileToggleBtn5");
+            console.log("웹페이지");
+            if(t5.value=="n"){
+                uu.innerHTML='<div class="changeProfileForm"><div class="changeProfileUrl"><div class="changeProfileInfo"><input type="text" value="웹페이지"></div><button class="changeProfileUrlButton" color="gray10">URL 추가</button></div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                t5.value="y";
+                t5.innerHTML="취소";
+            }else{
+                uu.innerHTML='<div class="profileContent" id="profileContentWebPage">등록된 웹페이지가 없습니다.</div>';
+                t5.value="n";
+                t5.innerHTML="변경";
+            }
+            break;
+        case 6:
+            let o = document.getElementById("profileContentProjectOpen");
+            let t6 = document.getElementById("profileToggleBtn6");
+            console.log("공개/비공개");
+            if(t6.value=="n"){
+                if(!$('#profileProjectOpenButton').attr('checked')){
+                    o.innerHTML='<div class="profileProjectOpenCheckForm"><input type="checkbox" id="profileProjectOpenButton" class="profileProjectOpenButton" style="cursor:pointer;"><label class="openCheckButtonLabel">등록한 프로젝트를 공개합니다.</label></div><div class="changeProfileSaveButton"><button onclick="openCheckSave()"><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                }else{
+                    o.innerHTML='<div class="profileProjectOpenCheckForm"><input type="checkbox" id="profileProjectOpenButton" class="profileProjectOpenButton" style="cursor:pointer;" checked><label class="openCheckButtonLabel">등록한 프로젝트를 공개합니다.</label></div><div class="changeProfileSaveButton"><button onclick="openCheckSave()"><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                }
+                t6.value="y";
+                t6.innerHTML="취소";
+            }else{
+                if(!$('#profileProjectOpenButton').prop('checked')){
+                    o.innerHTML='<label class="openCheckButtonLabel">등록한 프로젝트를 공개하지 않습니다.</label>';
+                }else{
+                    o.innerHTML='<input type="checkbox" id="profileProjectOpenButton" class="profileProjectOpenButton" checked disabled><label class="openCheckButtonLabel">등록한 프로젝트를 공개합니다.</label>';
+                }
+                t6.value="n";
+                t6.innerHTML="변경";
+            }
+            break;
+    }
+
+}
+
+function openCheckSave(){
+
+    let o = document.getElementById("profileContentProjectOpen");
+    let t6 = document.getElementById("profileToggleBtn6");
+
+    if(!$('#profileProjectOpenButton').prop('checked')){
+        o.innerHTML='<label class="openCheckButtonLabel">등록한 프로젝트를 공개하지 않습니다.</label>';
+    }else{
+        o.innerHTML='<input type="checkbox" id="profileProjectOpenButton" class="profileProjectOpenButton" checked disabled><label class="openCheckButtonLabel">등록한 프로젝트를 공개합니다.</label>';
+    }
+    t6.value="n";
+    t6.innerHTML="변경";
 }
