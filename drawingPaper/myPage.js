@@ -1,45 +1,35 @@
-let horizontalUnderLine = document.getElementById("horizontal-underline");
-let horizontalMenus = document.querySelectorAll(".myPageContentMenu a");
-let horizontalMenuss = document.querySelectorAll("eachMenu");
-let fst = document.getElementById('fst');
+// let horizontalUnderLine = document.getElementById("horizontal-underline");
+// let horizontalMenus = document.querySelectorAll(".myPageContentMenu a");
+// let horizontalMenuss = document.querySelectorAll("eachMenu");
+// let fst = document.getElementById('fst');
 
-function horizontalIndicator(e) {
-    horizontalUnderLine.style.transition = 0.3 + 's';
-    horizontalUnderLine.style.left = e.currentTarget.offsetLeft + "px";
-    horizontalUnderLine.style.width = e.currentTarget.offsetWidth + "px";
-    horizontalUnderLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + 20 + "px";
+// function horizontalIndicator(e) {
+//     // horizontalUnderLine.style.transition = 0.3 + 's';
+//     // horizontalUnderLine.style.left = e.currentTarget.offsetLeft + "px";
+//     // horizontalUnderLine.style.width = e.currentTarget.offsetWidth + "px";
+//     // horizontalUnderLine.style.top = e.currentTarget.offsetTop + e.currentTarget.offsetHeight + 20 + "px";
 
-    if (e.target.classList[1] === "clicked"){
-        e.target.classList.remove("clicked");
-        e.target.style.borderBottom = "none";
-    } else{
-        for (let i = 0; i < horizontalMenus.length; i++){
-            horizontalMenus[i].classList.remove("clicked");
-            horizontalMenus[i].style.borderBottom = "none";
-        }
-        e.target.classList.add("clicked");
-        e.target.style.borderBottom = "2px solid red"
-        e.target.style.transitionDuration = '0.3s';    
-        e.target.style.transitionProperty = 'all';    
-        e.target.style.transitionTimingFunction = 'linear';
-        e.target.style.transitionOrigin = 'center left';
-    }
+//     if (e.target.classList[1] === "clicked"){
+//         e.target.classList.remove("clicked");
+//     } else{
+//         for (let i = 0; i < horizontalMenus.length; i++){
+//             horizontalMenus[i].classList.remove("clicked");
+//         }
+//         e.target.classList.add("clicked");
+//     }
 
-    
-    
-}
+// }
 
-horizontalMenus.forEach((menu) =>
-    menu.addEventListener("click", (e) => horizontalIndicator(e))
-);
+// horizontalMenus.forEach((menu) =>
+//     menu.addEventListener("click", (e) => horizontalIndicator(e))
+// );
 
-$(document).ready(function(){
-    horizontalUnderLine.style.transition = 0 + 's';
-    horizontalUnderLine.style.left = fst.offsetLeft + "px";
-    horizontalUnderLine.style.width = fst.offsetWidth + "px";
-    horizontalUnderLine.style.top = fst.offsetTop + fst.offsetHeight + 20 + "px";
-    horizontalUnderLine.style.animation = 'fadeout 1s';
-});
+// $(document).ready(function(){
+//     horizontalUnderLine.style.transition = 0 + 's';
+//     horizontalUnderLine.style.left = fst.offsetLeft + "px";
+//     horizontalUnderLine.style.width = fst.offsetWidth + "px";
+//     horizontalUnderLine.style.top = fst.offsetTop + fst.offsetHeight + 20 + "px";
+// });
 
 
 function acyncMovePage(url){
@@ -60,17 +50,50 @@ function acyncMovePage(url){
 
 $(document).ready(function(){
     $('#myPageContentLower').load("myPage_1.html");
+
 });
+
+$('nav a').on('click', function(){
+    $(this).addClass('on');
+    $(this).siblings().removeClass('on');
+    $('nav div > span').css({width: this.offsetWidth + 'px'});
+    $('nav div > span').css({left: this.offsetLeft + 'px'});
+});
+
+function checkWebPage(){
+    if($("#urlInput").val() == ""){
+        alert("URL을 입력해주세요.");
+        $("#urlInput").focus();
+        return false;
+    }
+    let urlInput =  $("#urlInput").val();
+    const Url = /((\w+)[.])+(asia|biz|cc|cn|com|de|eu|in|info|jobs|jp|kr|mobi|mx|name|net|nz|org|travel|tv|tw|uk|us)(\/(\w*))*$/i;
+    let urlRes = Url.test(urlInput);
+
+    let urlCheck = document.getElementById("urlCheck");
+    let urlCheckForm = document.getElementById("urlCHeckForm");
+
+    if(!urlRes){
+        $('#urlCheck').css({color: 'red'});
+        $('#urlCheckForm').css({border: '1px solid red'});
+        urlCheck.innerHTML = "올바른 URL을 입력하세요!"
+    }else if(urlRes){
+        $('#urlCheck').css({color: 'green'});
+        $('#urlCheckForm').css({border: '1px solid rgb(230, 230, 230)'});
+        urlCheck.innerHTML = "사용 가능한 URL 입니다."
+    }
+
+}
 
 function toggleChange(e)
 {
     switch(e){
         case 1:
-            let i = document.getElementById("profileContentImage");
+            let i = document.getElementById("profileContentImageContainer");
             let t1 = document.getElementById("profileToggleBtn1");
             console.log("이미지");
             if(t1.value=="n"){
-                i.innerHTML='<input type="file">';
+                i.innerHTML='<div class="myPageProfileOuterWrapper"><div class="myPageProfileImageContainer"><div class="myPageProfileImageWrapper"><div class="myPageProfileImageBox"><div class="myPageProfileImage" id="profileContentImage">박</div></div></div></div><div class="changeProfileImageWrapper"><div class="changeProfileImage"><span color="gray10" type="line"><input type="file" name="changeProfileImage" accept=".jpg,.jpeg,.png,.gif"><label for="changeProfileImage">파일 업로드</label></span></div><div class="profileImageExplaination">250 x 250 픽셀에 최적화되어 있으며, 10Mb 이하의 JPG, GIF, PNG 파일을 지원합니다.</div></div></div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div>';
                 t1.value="y";
                 t1.innerHTML="취소";
             }else{
@@ -126,7 +149,7 @@ function toggleChange(e)
             let t5 = document.getElementById("profileToggleBtn5");
             console.log("웹페이지");
             if(t5.value=="n"){
-                uu.innerHTML='<div class="changeProfileForm"><div class="changeProfileUrl"><div class="changeProfileInfo"><input type="text" value="웹페이지"></div><button class="changeProfileUrlButton" color="gray10">URL 추가</button></div><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
+                uu.innerHTML='<div class="changeProfileForm"><div class="changeProfileUrl"><div id="urlCheckForm" class="changeProfileInfo"><input type="text" id="urlInput" value="웹페이지"></div><button class="changeProfileUrlButton" color="gray10" onclick="checkWebPage()">URL 추가</button></div><span id="urlCheck"></span><div class="changeProfileSaveButton"><button><span class="changeProfileSaveButtonName">저장</span></button></div></div>';
                 t5.value="y";
                 t5.innerHTML="취소";
             }else{
@@ -174,3 +197,4 @@ function openCheckSave(){
     t6.value="n";
     t6.innerHTML="변경";
 }
+
