@@ -49,7 +49,7 @@ function acyncMovePage(url){
 }
 
 $(document).ready(function(){
-    $('#myPageContentLower').load("myPage_1.html");
+    $('#myPageContentLower').load("myPageProfile.html");
 
 });
 
@@ -97,7 +97,7 @@ function toggleChange(e)
                 t1.value="y";
                 t1.innerHTML="취소";
             }else{
-                i.innerHTML='<div class="myPageProfileImageWrapper"><div class="myPageProfileImageBox"><div class="myPageProfileImage" id="profileContentImage">박</div></div></div>';
+                i.innerHTML='<div id="profileContentImageContainer"><div id="profileContentImage" class="profileSmallImageWrapper"><div class="myPageProfileImageWrapper"><div class="myPageProfileImageBox"><div class="myPageProfileImage">박</div></div></div></div></div>';
                 t1.value="n";
                 t1.innerHTML="변경";
             }
