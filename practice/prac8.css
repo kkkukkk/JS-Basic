@@ -1,0 +1,11 @@
+* {padding:0; margin: 0; text-decoration: none; list-style: none;}
+nav {position: fixed; left:0; top:0; background: #fff; box-shadow: 0 0 5px rgba(0,0,0,.5);}
+nav div{display:flex; position: relative; width:500px; margin: 0 auto;}
+nav div a { flex:1; display: block; height: 40px; line-height: 40px; text-align: center; color:#8f8f8f;}
+nav div a.on { color:#000;}
+nav div > span { position:absolute; left: 0; bottom: 0; width: 100px; height: 3px; background: #279d76; opacity: 0; transition: all .5s;}
+nav div a:nth-child(1).on ~ span { left: 0; opacity: 1;}
+nav div a:nth-child(2).on ~ span { left: 100px; opacity: 1;}
+nav div a:nth-child(3).on ~ span { left: 200px; opacity: 1;}
+nav div a:nth-child(4).on ~ span { left: 300px; opacity: 1;}
+nav div a:nth-child(5).on ~ span { left: 400px; opacity: 1;}

@@ -10,11 +10,11 @@ function printHellow() {
 
 printHellow();
 
-function log(mesage) {
-    console.log(message);
-}
-log('Hello@');
-log(1234);
+// function log(mesage) {
+//     console.log(message);
+// }
+// log('Hello@');
+// log(1234);
 
 // TypeScript ¿¡¼±
 // function log(message : string) : number {

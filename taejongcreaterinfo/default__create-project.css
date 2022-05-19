@@ -1,0 +1,117 @@
+@charset "UTF-8";
+@import url("variables.css");
+.p {
+  margin: 0;
+}
+.flex {
+  display: flex;
+}
+.se1 {
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  background-color: var(--background);
+}
+.main-content {
+  width: 1080px;
+  padding-top: 84px;
+  margin: auto;
+  letter-spacing: -0.015em;
+}
+.content-row {
+  padding-bottom: 48px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-row > div.content-col:nth-child(1) {
+  width: 351px;
+  margin: 0 0 14px;
+}
+
+.content-row > div.content-col:nth-child(2) {
+  width: 630px;
+}
+
+.sub-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+  color: var(--black);
+  
+}
+
+.icon__star-box {
+  display: inline-block;
+}
+
+.icon__star-box > svg {
+  font-size: 13px;
+  width: 1em;
+  height: 1em;
+  fill: var(--red);
+}
+
+.sub-explain {
+  font-weight: 400;
+  color: var(--gray);
+  margin: 0px;
+  font-size: 13px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.sub-notice {
+  background-color: var(--pink);
+  border-radius: 8px;
+  padding: 20px 24px 20px 50px;
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 20px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+  margin-top: 25px;
+  z-index: 1;
+}
+.icon__i-box > svg {
+  fill: var(--red);
+  width: 1em;
+  height: 1em;
+}
+
+.icon__cal-box {
+  display: inline-flex;
+}
+
+.icon__cal-box > svg {
+  margin: 0 9px 0 0;
+  width: 1em;
+  height: 1em;
+}
+
+.icon__arrow-box > svg {
+  fill: var(--black);
+  width: 1em;
+  height: 1em;
+}
+
+.ready-ani {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease 0s;
+}
+
+.start-ani {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease 0s;
+}
+
+/* ------------------------------------------------------------------------------------ */
+
+/* ========================================================================================== */

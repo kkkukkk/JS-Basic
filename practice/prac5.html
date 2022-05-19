@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta http0equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="sweetalert2.min.css">
@@ -174,7 +174,7 @@
 
             Swal.fire({
                 html:
-                '<div class="entire"><div class="title">배송지 추가</div><div class="inputLabel">받는 사람</div><div class="getName"><input type="text" placeholder="이름 입력" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'이름 입력\'"></div><div class="addrWrapper"><div class="inputLabel">주소</div><div class="getAddr"><span class="inputWrapper"><input type="text"><button class="addrBtn">go</button></span></div></div><div class="addrDetailWrapper"><div class="inputLabel">상세 주소</div><div class="getAddrDetail"><input type="text"></div></div><div class="phoneWrapper"><div class="inputLabel">받는 사람 휴대폰 번호</div><div class="getPhone"><input type="text"></div></div><div class="chkBtns"><div class="chkBtn"><input id="btn" type="checkbox"></div><div class="chkLabel"><label for="btn">기본 배송지로 등록</label></div></div><div class="commitBtn"><button>등록 완료</button></div></div>',
+                '<div class="entire"><div class="title">배송지 추가</div><div class="inputLabel">받는 사람</div><div class="getName"><input type="text" placeholder="이름 입력" onfocus="this.placeholder=\'\'" onblur="this.placeholder=\'이름 입력\'"></div><div id="addrsWrapper" class="addrsWrapper"><div class="addrWrapper"><div class="inputLabel">주소</div><div class="getAddr"><span class="inputWrapper"><input type="text"><input type="button" class="addrBtn" onclick="addrDetailSpan()" value="go"></span></div></div><span><div class="addrDetailWrapper"><div class="inputLabel">상세 주소</div><div class="getAddrDetail"><input type="text"></div></div></span></div><div class="phoneWrapper"><div class="inputLabel">받는 사람 휴대폰 번호</div><div class="getPhone"><input type="text"></div></div><div class="chkBtns"><div class="chkBtn"><input id="btn" type="checkbox"></div><div class="chkLabel"><label for="btn">기본 배송지로 등록</label></div></div><div class="commitBtn"><button>등록 완료</button></div></div>',
                 width:600,
                 showConfirmButton: false,
                 showCloseButton: true,
@@ -182,6 +182,13 @@
             });
 
         }
+
+        function addrDetailSpan(){
+            let a = document.getElementById("addrsWrapper");
+            console.log(a);
+            a.innerHTML += "<span><div class='addrDetailWrapper'><div class='inputLabel'>상세 주소</div><div class='getAddrDetail'><input type='text'></div></div></span>";
+        }
+
     </script>
     <button onclick="hi()">동작!</button>
 

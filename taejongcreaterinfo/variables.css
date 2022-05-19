@@ -1,0 +1,282 @@
+@charset "UTF-8";
+@import url("default__create-project.css");
+@import url("variables.css");
+
+#admheader {
+  background-color: white;
+  border: none;
+  margin-bottom: 78px;
+}
+body {
+  background-color: white;
+}
+
+.sec1 {
+  background-color: var(--background);
+}
+.hide {
+  display: none;
+}
+
+.input-box {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0 18px;
+}
+.input-box input {
+  width: 100%;
+  border: 0px;
+  padding: 11px 0px;
+  box-sizing: border-box;
+  height: 100%;
+  outline: none;
+  margin: 0px;
+  appearance: none !important;
+
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 24px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+
+  cursor: auto;
+}
+
+.input-box input::placeholder {
+  color: var(--light-gray);
+  opacity: 0.7;
+}
+
+.icon__upload {
+  display: inline-flex;
+}
+
+.icon__upload > svg {
+  width: 1em;
+  height: 1em;
+  fill: var(--red);
+  margin-right: 9px;
+}
+
+.creater-img-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.creater-img__upload-btn button {
+  position: relative;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 14px;
+  color: var(--gray);
+  border: 1px solid rgb(240, 240, 240);
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.creater-img__upload-btn input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: default;
+}
+
+.creater-img__explane {
+  font-size: 12px;
+  color: var(--light-gray);
+  line-height: 20px;
+}
+
+.creater-img__box {
+  margin-right: 32px;
+  width: 112px;
+  height: 112px;
+  display: flex;
+}
+
+.creater-img__circle-frame {
+  width: 100%;
+  height: 100%;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.creater-img__circle-frame > div {
+  background: url("../../../images/createproject/icon.jpg") 50% 37% / cover no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.creater-introduction__text-box {
+  border: 1px solid var(--red);
+  display: flex;
+  padding: 0 18px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.creater-introduction__inner-box {
+  width: 100%;
+  height: 78px;
+  padding: 13px 0;
+}
+
+.creater-introduction__text-box textarea {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  resize: none;
+  outline: none;
+}
+
+.creater-introduction__text-box textarea::placeholder {
+  color: var(--black);
+  opacity: 0.3;
+  font-size: 14px;
+}
+
+.creater-area-wrap {
+  justify-content: space-between;
+}
+
+.creater-area__gungu,
+.creater-area__sido {
+  width: 50%;
+  margin: 0 8px;
+}
+
+.creater-area__title {
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 18px;
+  letter-spacing: -0.005em;
+  margin-bottom: 8px;
+  color: rgb(61, 61, 61);
+  display: flex;
+}
+
+.creater-area__select {
+  width: 100%;
+  position: relative;
+}
+
+.creater-area-wrap span {
+  display: flex;
+  width: 100%;
+  padding: 0px 18px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(240, 240, 240);
+  align-items: center;
+}
+
+.creater-area__select input {
+  cursor: default;
+  width: 100%;
+  background: transparent;
+  border: 0px;
+  padding: 11px 0px;
+  box-sizing: border-box;
+  height: 100%;
+  outline: none;
+  margin: 0px;
+  appearance: none !important;
+}
+
+.icon__arrow svg {
+  width: 1em;
+  height: 1em;
+}
+
+.icon__w,
+.icon__exclamation {
+  padding-bottom: 8px;
+}
+
+.icon__w svg,
+.icon__exclamation svg {
+  width: 1em;
+  height: 1em;
+  fill: var(--red);
+}
+
+.creater-acount-wrap p {
+  color: var(--red);
+  font-size: 12px;
+}
+.creater-auth-wrap p {
+  color: var(--red);
+  font-size: 12px;
+}
+
+.creater-acount__box,
+.creater-auth__box {
+  justify-content: space-between;
+}
+
+.creater-acount-wrap,
+.creater-auth-wrap {
+  padding: 24px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.creater-acount__btn,
+.creater-auth__btn {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: white;
+  padding: 8px 16px;
+  font-weight: 500;
+  font-size: 11px !important;
+  line-height: 18px !important;
+  font-family: NotoSansKR, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial,
+    sans-serif !important;
+}
+
+.text-box__alert,
+.input-box__alert {
+  display: flex;
+  position: relative;
+}
+.text-box__msg,
+.input-box__msg {
+  color: var(--red);
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.text-box__length,
+.input-box__length {
+  position: absolute;
+  right: 0px;
+  color: var(--light-gray);
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+/* =========================================================== */
+
+.gugun,
+.sido {
+  position: absolute;
+  margin-top: 4px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.gugun button,
+.sido button {
+  width: 100%;
+  height: 100%;
+  padding: 11px 0;
+  background-color: white;
+  border: none;
+}
