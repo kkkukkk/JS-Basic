@@ -1,3 +1,10 @@
+@charset "UTF-8";
+
+/* div{
+    margin: 5px;
+    border: 2px solid black;
+} */
+
 input{
     caret-color:rgb(255, 87, 87);
 }
@@ -16,30 +23,20 @@ em{
 }
 
 .myPageContentUpperWrapper{
-    border-bottom: 1px solid rgba(16, 16, 16, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .myPageContentUpper{
     padding:40px 0px 0px;
-    max-width: 1080px;
+    max-width: 1161px;
     margin:auto;
 }
 
 .myPageContentLower{
     padding:40px 0px 24px;
-    max-width: 1080px;
+    max-width: 1161px;
     margin:auto;
     min-height: 460px;
-    color: rgb(158, 158, 158);
-    font-size: 18px;
-    line-height: 27px;
-    letter-spacing: -0.02em;
-    padding-bottom: 32px;
-    font-weight:bold;
-}
-
-.myPageContentLowerWrapper{
-    border-bottom: 1px solid rgba(16, 16, 16, 0.1);
 }
 
 .myPageContentContainer{
@@ -62,6 +59,7 @@ nav div a{
     text-align: left;
     height: 50px;
     line-height: 40px;
+    text-decoration: none;
     -webkit-tap-highlight-color: rgba(0,0,0,.1);
     letter-spacing: -0.02em;
 }
@@ -82,10 +80,10 @@ nav div > span {
     transition: all .5s;
 }
 
-nav div a:nth-child(1).on ~ span { opacity: 1;}
-nav div a:nth-child(2).on ~ span { opacity: 1;}
-nav div a:nth-child(3).on ~ span { opacity: 1;}
-nav div a:nth-child(4).on ~ span { opacity: 1;}
+nav div a:nth-child(1).on ~ span { left: 0; opacity: 1;}
+nav div a:nth-child(2).on ~ span { left: 100px; opacity: 1;}
+nav div a:nth-child(3).on ~ span { left: 200px; opacity: 1;}
+nav div a:nth-child(4).on ~ span { left: 300px; opacity: 1;}
 
 
 .myPageContentMenu a:hover{
@@ -124,24 +122,10 @@ nav div a:nth-child(4).on ~ span { opacity: 1;}
 }
 
 .myPageProfileButtonImage{
-    width:32px;
-    height:32px;
-
-    -webkit-animation: rotation 2s infinite linear;
-}
-@-webkit-keyframes rotation{
-    from {
-        -webkit-transform: rotate(0deg);
-    }
-    to {
-        -webkit-transform: rotate(359deg);
-    }
+    width:26px;
+    height:26px;
 }
 
-.myPageProfileButton:hover{
-    transform:scale(20);
-    transition:3s;
-}
 
 .myPageProfileName{
     height:100%;
@@ -224,6 +208,10 @@ nav div a:nth-child(4).on ~ span { opacity: 1;}
     height: 80px;
 }
 
+#profileContentImageContainer{
+    margin-bottom:20px;
+}
+
 .myPageProfileImageBox{
     width: 100%;
     height: 100%;
@@ -250,6 +238,20 @@ nav div a:nth-child(4).on ~ span { opacity: 1;}
     font-weight: bold;
     margin:0;
     font-size:40px;
+}
+
+.myPageContentLower{
+    min-height:100px;
+    color: rgb(158, 158, 158);
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    padding-bottom: 32px;
+    font-weight:bold;
+}
+
+.myPageContentLowerWrapper{
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
 
 .myPageChangeTitle{
@@ -444,6 +446,24 @@ nav div a:nth-child(4).on ~ span { opacity: 1;}
     font-weight: 500;
 }
 
+#profileIntroChange{
+    height: 200px;
+    max-height: 1000px;
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 4px;
+    padding: 12px;
+    width:95%;
+}
+
+#profileIntroChange1{
+    width: 100%;
+    height: 100%;
+    border: 0px;
+    padding: 0px;
+    resize: none;
+    overflow:auto;
+}
+
 .changeUrlExplain{
     margin: 8px 0px 0px;
     color: rgb(109, 109, 109, 0.8);
@@ -493,26 +513,4 @@ nav div a:nth-child(4).on ~ span { opacity: 1;}
 #urlCheck{
     color: red;
     opacity: 0.6;
-}
-
-#profileContentImageContainer{
-    margin-bottom:20px;
-}
-
-#profileIntroChange{
-    height: 200px;
-    max-height: 1000px;
-    border: 1px solid rgb(230, 230, 230);
-    border-radius: 4px;
-    padding: 12px;
-    width:95%;
-}
-
-#profileIntroChange1{
-    width: 100%;
-    height: 100%;
-    border: 0px;
-    padding: 0px;
-    resize: none;
-    overflow:auto;
 }

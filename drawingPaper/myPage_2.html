@@ -1,18 +1,86 @@
-<div class="myPageProfileContainer">
-    <div class="myPageProfileContentHead">
-        <em>0</em>
-        <div>개의 프로젝트가 있습니다</div>
-    </div>
+<!DOCTYPE html>
+<html>
 
-    <div class="myPageProfileContent">
-        <div class="myPageProfileContentWrapper">
-            <div class="myPageProfileContentImage">
-                <svg viewBox="0 0 48 48">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M 21.8113 37.22 C 13.3064 37.22 6.4025 30.3161 6.4025 21.8113 C 6.4025 13.3064 13.3064 6.4025 21.8113 6.4025 C 30.3161 6.4025 37.22 13.3064 37.22 21.8113 C 37.22 30.3161 30.3161 37.22 21.8113 37.22 Z M 45.3246 42.2229 L 37.22 34.1172 C 44.0239 25.6124 42.6231 13.1063 34.1182 6.4025 C 30.9174 3.70097 26.714 2.20011 22.5117 2 H 21.8113 H 21.1109 C 10.805 2.40023 2.40023 10.7049 2 21.0108 V 21.7112 V 22.3115 C 2.30017 33.2177 11.4053 41.8226 22.3115 41.5225 C 26.614 41.4224 30.7163 39.9215 34.1182 37.22 L 42.2229 45.3246 C 43.1234 46.2251 44.4251 46.2251 45.3246 45.3246 C 46.2251 44.5242 46.2251 43.1224 45.3246 42.2229 Z"></path>
-                </svg>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="myPage.css">
+</head>
+
+<body>
+
+    <div class="myPageContent">
+        <div class="myPageContentUpperWrapper">
+            <div class="myPageContentUpper">
+
+                <div class="myPageProfileInfo">
+                    <div class="myPageProfileImageWrapper">
+                        <div class="myPageProfileImageBox">
+                            <div class="myPageProfileImage">박</div>
+                        </div>
+                    </div>
+
+                    <div class="myPageProfileEntities">
+                        <div class="myPageProfileButtons">
+                            <div class="myPageProfileName">
+                                NAME
+                            </div>
+                            <a href="#">
+                                <div class="myPageProfileButton">
+                                    <img class="myPageProfileButtonImage"
+                                        src="https://img.icons8.com/external-kmg-design-basic-outline-kmg-design/32/000000/external-setting-business-management-kmg-design-basic-outline-kmg-design.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <div class="myPageProfileDate">
+                            가입일
+                        </div>
+                    </div>
+                </div>
+                <nav class="myPageContentContainer">
+                    <div class="myPageContentMenu">
+                        <a class="myProfile" onclick="acyncMovePage('myPageProfile.html')" style="cursor:pointer;"><span class="myPageMenuBtn">프로필</span></a>
+                        <a class="myPage2" onclick="acyncMovePage('myPage_2.html')" style="cursor:pointer;"><span class="myPageMenuBtn">올린 프로젝트</span></a>
+                        <a class="myPage3" onclick="acyncMovePage('myPage_3.html')" style="cursor:pointer;"><span class="myPageMenuBtn">후원한 프로젝트</span></a>
+                        <a class="myPage4" onclick="acyncMovePage('myPage_4.html')" style="cursor:pointer;"><span class="myPageMenuBtn">관심 프로젝트</span></a>
+                        <span></span>
+                    </div>
+                </nav>
+
             </div>
-            <span>올린 프로젝트가 없습니다.</span>
         </div>
 
-    </div>
-</div>
+        <div class="myPageContentLowerWrapper">
+            <div id="myPageContentLower" class="myPageContentLower">
+
+
+                <div class="myPageProfileContainer">
+                    <div class="myPageProfileContentHead">
+                        <em>0</em>
+                        <div>개의 프로젝트가 있습니다</div>
+                    </div>
+
+                    <div class="myPageProfileContent">
+                        <div class="myPageProfileContentWrapper">
+                            <div class="myPageProfileContentImage">
+                                <svg viewBox="0 0 48 48">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M 21.8113 37.22 C 13.3064 37.22 6.4025 30.3161 6.4025 21.8113 C 6.4025 13.3064 13.3064 6.4025 21.8113 6.4025 C 30.3161 6.4025 37.22 13.3064 37.22 21.8113 C 37.22 30.3161 30.3161 37.22 21.8113 37.22 Z M 45.3246 42.2229 L 37.22 34.1172 C 44.0239 25.6124 42.6231 13.1063 34.1182 6.4025 C 30.9174 3.70097 26.714 2.20011 22.5117 2 H 21.8113 H 21.1109 C 10.805 2.40023 2.40023 10.7049 2 21.0108 V 21.7112 V 22.3115 C 2.30017 33.2177 11.4053 41.8226 22.3115 41.5225 C 26.614 41.4224 30.7163 39.9215 34.1182 37.22 L 42.2229 45.3246 C 43.1234 46.2251 44.4251 46.2251 45.3246 45.3246 C 46.2251 44.5242 46.2251 43.1224 45.3246 42.2229 Z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <span>올린 프로젝트가 없습니다.</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script defer src="myPage.js"></script>
+</body>
+
+</html>
