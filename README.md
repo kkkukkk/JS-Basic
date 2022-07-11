@@ -1,4 +1,6 @@
 # JS-Basic
 
-JavaScript 기본 개념 및 DOM 활용 연습
+✨ JavaScript Basic  
+- JavaScript  
+Variable, Function, Class, Events, Jquery, CSS, HTML ...
  
